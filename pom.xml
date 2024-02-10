@@ -2,6 +2,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.2</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
   <groupId>vs.projects</groupId>
   <artifactId>vs-services</artifactId>
   <version>1.0-SNAPSHOT</version>
@@ -14,6 +21,7 @@
     <module>eureka-server</module>
       <module>clients</module>
       <module>notification</module>
+      <module>apigateway</module>
   </modules>
 
 
@@ -21,8 +29,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>18</maven.compiler.source>
     <maven.compiler.target>18</maven.compiler.target>
-    <spring.boot.maven.plugin.version>3.2.1</spring.boot.maven.plugin.version>
+    <spring.boot.maven.plugin.version>3.2.2</spring.boot.maven.plugin.version>
     <spring.cloud-version>2023.0.0</spring.cloud-version>
+    <micrometer-tracing.version>1.2.2</micrometer-tracing.version>
   </properties>
 
   <dependencyManagement>
